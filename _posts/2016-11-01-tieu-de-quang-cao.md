@@ -3,12 +3,9 @@ title:      "Tiêu đề quảng cáo gây ấn tượng mạnh"
 description:   "Đừng viết nhàm chán, hãy chăm chút cho tiêu đề bài viết của mình"
 date:       2016-11-15 12:00:00
 author:     "Vu, Nguyen"
-#=== Hinh-minh-hoa dark-bg-blur http://full-link
 header-img: "http://www.webdesignhot.com/wp-content/uploads/2014/02/Dark-Blue-Waves-Abstract-Background-Vector-Illustration.jpg"    
-#=== keyword and long-keyword
 keyword :   "tiêu đề bài viết seo"                 
 long-keyword: "marketing online bằng tiêu đề bài viết seo"        
-#=== site target SEO
 target-site: "http://digitalife.top"    
 category: advertising
 tags: ["Tiêu đề bài viết seo"]
@@ -23,6 +20,8 @@ tags: ["Tiêu đề bài viết seo"]
 >> Phải LINK về TARGET-SEO-SITE 
 =========================================== -->
 
+Chung ta da biet cach the nao de ok man , dugn viet nham chan hat kam bat cu 
+<!--more-->
 
 <!-- =================== Đầu bài ====================== -->
 

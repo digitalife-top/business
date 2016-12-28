@@ -5,26 +5,38 @@ description: "Follow our news and update"
 ---
 
 {% for post in paginator.posts %}
-<article>
-    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+<div class="row">
+	<div class="col s12 m4 hide-on-med-and-down">
+		<!--<img src="https://assets.entrepreneur.com/content/3x2/274/20161108193331-GettyImages-594918166.jpeg">-->
+		<a href="{{ post.url | prepend: site.domain }}"><img src="{{ post.header-img}}" class="responsive-img"></a>
+	</div>
+	<div class="col s12 m8">
+		<article>
+    <a>{{ post.categories[0] | upcase }}</a>
+    <a class="post-link" href="{{ post.url | prepend: site.domain }}">
         <h2 class="post-title">{{ post.title }}</h2>
     </a>
-    {% if post.description %}
-    <h3 class="post-subtitle">
-        {{ post.description }}
-    </h3>
-    {% endif %}
-    <!-- <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
-     -->
-    <p class="post-meta">
+    
+    <p class="post-subtitle">
+			{% if post.excerpt %}
+        {{ post.excerpt | remove: '<p>' | remove: '</p>' |remove: '<h2>' | remove: '</h2>' }}
+      {% else %}
+      	{{ post.description | remove: '<p>' | remove: '</p>' }}
+      {% endif %}
+    </p>
+    
+    <p class="post-meta" style="font-size:90%">
     {% if post.author %}
-      <i class="fa fa-user"></i> {{ post.author }}
+      <i class="fa fa-user"></i> {{ post.author }} &nbsp;&nbsp;
     {% else %}
       {{ site.title }}
     {% endif %} 
-      <i class="fa fa-calendar"></i> {{ post.date | date: "%B %-d, %Y" }}
+      <i class="fa fa-calendar"></i> {{ post.date | date: "%d/%m/%Y" }}
     </p>
-</article>
+    
+		</article>
+	</div>
+</div>
 <hr class="style">
 
 <div style="margin-top: 40px"></div>

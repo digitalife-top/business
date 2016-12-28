@@ -1,9 +1,13 @@
-# Site settings site.title
-title: Digitalife
-url: "https://digitalife-top.github.io"   # domain-name 
-baseurl: "/business"                      # repo-name 
-description: "Write your site description here. Meta description as well!"
 
+#---------- Site settings ------------
+title: BestWebdesign
+domain: "http://bestwebdesign.top"   	# dung thay cho site.url
+url: "http://bestwebdesign.top"   		# bi localhost default do khong chay duoc ENV jekyll build
+baseurl: ""                       
+description: "Just Email-us to own a landing page in 24hrs. You will get this on the next day."
+excerpt_separator: <!--more-->
+
+#---------- footer ----------------
 copyright_name: Digitalife.top #footer
 header-img: img/home-bg.jpg
 email: nguyencongvu@gmail.com
@@ -12,15 +16,15 @@ author: "Vu, Nguyen"
 language: "vi" #seo
 locale: "en-US"  #seo
 keyword: "marketing online hieu qua" #seo
-og_image: "assets/img/small/logo.png" #seo
-comment_activate: false #set false or "" to disabled 
+#og_image: "assets/img/small/logo.png" #seo
+comment_activate: false #set false or empty to disabled 
 
 #cdn
 cdn_url : "http://cdn.digitalife.top:8080"
 
 #social account --> EDIT 
 twitter_username: "vunc"
-github_username:  digitalife-top
+github_username:  #digitalife-top
 facebook_username:  "nguyencongvu"
 facebook_app_id:  "303370230021409"
 facebook_admins: "791078183"
@@ -37,9 +41,9 @@ contact_address: "666 Đường 3/2 P.14, Q.10"
 contact_city: "TP.Hồ Chí Minh"
 contact_country: "Vietnam"
 
-# Analytics --> EDIT if needed 
-# google_tracking_id:
-google_site_verification : "UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y"
+#------------- Analytics -------------------
+google_tracking_id: "UA-82197343-4"  #analytic
+google_site_verification : "MHc068fjOGpvFnEpUHW93SwYQlfkofelbuNNxlLJOS4"
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :

@@ -1,5 +1,3 @@
-
-   
 function initAll(){
     // from setting.js
     var COLOR = chooseColor; 
@@ -11,18 +9,18 @@ function initAll(){
     setColor(COLOR);
     styleControls();
 
-    animateToView(".tada","tada");
-    animateToView(".lightSpeedIn","lightSpeedIn");
-    animateToView(".rubberBand","rubberBand");
-    animateToView(".bounceOut","bounceOut");
-    animateToView(".bounceIn","bounceIn");
+    // animateToView(".tada","tada");
+    // animateToView(".lightSpeedIn","lightSpeedIn");
+    // animateToView(".rubberBand","rubberBand");
+    // animateToView(".bounceOut","bounceOut");
+    // animateToView(".bounceIn","bounceIn");
 
     // animationHover(".btn","tada");
 
-    initFacebook(FB_APP_ID);
+    // initFacebook(FB_APP_ID);
     // initTwitter();
-    initGoogleAnalytic(GOOGLE_ANALYTIC_ID);
-    setKeyword(KEYWORDS);
+    // initGoogleAnalytic(GOOGLE_ANALYTIC_ID);
+    // setKeyword(KEYWORDS);
 
     typo();
 }
@@ -84,12 +82,14 @@ function setKeyword(KEYWORDS){
 function styleControls(){
     $(".dropdown-button").dropdown();
     $('.parallax').parallax();
-    $("#owl-example").owlCarousel({
+    
+    $(".owl-carousel").owlCarousel({
         autoPlay: 3000, //Set AutoPlay to 3 seconds
         items : 3,
         margin: 20,
         autoHeight : true,
         lazyLoad : true,
+        dots: false
     });
 
     $('ul.tabs').tabs();
@@ -114,6 +114,7 @@ function styleControls(){
         menuWidth: 240, // Default is 240
         edge: 'right', // Choose the horizontal origin
     });
+
 }
 
 function checkLicense(url){

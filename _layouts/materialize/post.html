@@ -11,26 +11,24 @@ layout: materialize/default
     {% endif %}
 
     <!-- text inside parallax -->
+    <div style="margin-top: 80px;"></div>
     <div class="white-text container">
-        <div style="margin-top: 80px;"></div>
+      	<h1 class="lightSpeedIn"><b>{{ page.title }}</b></h1>
+      	<h5><i class="fa fa-quote-left"></i> {{ page.description }}</h5>
         
-        <h1 class="lightSpeedIn"><b>{{ page.title }}</b></h1>
-        {% if page.description %}
-            <h3><i class="fa fa-quote-right"></i> {{ page.description }}</h3>
-        {% endif %}    
     </div>
 </div>
 
 <div class="container">
 
   <section id="post-content">
-    <p>
+    <p style="font-size:90%">
       {% if page.author %}
-        <i class="fa fa-user"></i> {{ page.author }} - 
+        <i class="fa fa-user"></i> {{ page.author }} &nbsp;&nbsp;
       {% else %}
         {{ site.title }}
       {% endif %} 
-        <i class="fa fa-calendar"></i> {{ page.date | date: "%d/%m/%Y" }} - 
+        <i class="fa fa-calendar"></i> {{ page.date | date: "%d/%m/%Y" }} &nbsp;&nbsp;
         <i class="fa fa-clock-o"></i> {% include readtime.html %}
     </p>
     <!-- ======   TEXT EFFECT - DONT EDIT ====== -->
@@ -46,10 +44,11 @@ layout: materialize/default
     <div id="paging"> 
       <div>
           {% if page.previous.url %}
-              <a class="btn btn-flat grey lighten-4" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+              <a class="btn btn-flat grey lighten-4" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous</a>
           {% endif %}
+          		<a class="btn btn-flat grey lighten-3" href="{{ site.baseurl }}/blogs">Blog Home</a>
           {% if page.next.url %}
-              <a class="btn btn-flat grey lighten-4" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+              <a class="btn btn-flat grey lighten-4" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next &rarr;</a>
           {% endif %}
       </div>
     </div>
@@ -60,36 +59,8 @@ layout: materialize/default
   <!-- Share -->
   <div id="share">
     <div class="card-panel grey lighten-5 row">
-    <h3><i class="fa fa-share-alt"></i> Share this on </h3>                  
-    
-    <a class="col s6 m2 btn btn-flat blue white-text" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.baseurl }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter">
-      <i class="fa fa-twitter"></i> Twitter
-    </a>
-
-    <a class="col s6 m2 btn btn-flat red darken-3 white-text" href="https://plus.google.com/share?url={{ site.baseurl }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+">
-      <i class="fa fa-google-plus"></i> Google+
-    </a>
-
-    <a class="col s6 m2 btn btn-flat blue darken-3 white-text" href="https://facebook.com/sharer.php?u={{ site.baseurl }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook">
-      <i class="fa fa-facebook"></i> Facebook
-    </a>
-
-    <!-- <a class="btn btn-flat red lighten-3 white-text" href="http://pinterest.com/pin/create/button/?url=<URL>&description=<TITLE>" rel="nofollow" target="_blank" title="Share on Google+">
-      <i class="fa fa-pinterest"></i> Pinterest
-    </a> -->
-
-  <!--   <a class="btn btn-flat blue lighten-3 white-text" href="http://www.linkedin.com/shareArticle?mini=true&url=<URL>&title=<TITILE>&summary=<DESCRIPTION>&source=<DOMAIN>" rel="nofollow" target="_blank" title="Share on Google+">
-      <i class="fa fa-linkedin"></i> LinkedIn
-    </a>
-   -->
-    <a class="col s6 m2 btn btn-flat grey darken-3 white-text" href="http://www.tumblr.com/share/link?url=<URL>&name=<TITLE>&description=<DESCRIPTION>" rel="nofollow" target="_blank" title="Share on Google+">
-      <i class="fa fa-tumblr"></i> Tumblr
-    </a>
-
-    <a class="col s6 m2 btn btn-flat red darken-1 white-text" href="http://www.reddit.com/submit?url=<URL>&title=<TITLE>" rel="nofollow" target="_blank" title="Share on Google+">
-      <i class="fa fa-reddit"></i> Reddit
-    </a>
-
+    	<h3 class="main-color-text"><i class="fa fa-share-alt"></i> Share this on </h3>                  
+			{% include share.html %}
     </div> <!-- card panel -->
 
     <div>
@@ -113,7 +84,7 @@ layout: materialize/default
         {% else %}
           {% assign categories = page.categories %}
         {% endif %}
-        <b>     - Category:</b> 
+        &nbsp;&nbsp;&nbsp;<b>Category:</b> 
         {% for category in categories %}
           <a href="{{site.baseurl}}/categories/#{{category|slugize}}"><i class="fa fa-folder-open"></i> {{category}}</a>
         {% unless forloop.last %}&nbsp;{% endunless %}
@@ -127,7 +98,7 @@ layout: materialize/default
   <!-- related posts -->
         
       <!-- tag related --> 
-      <h3><i class="fa fa-link"></i> Related posts</h3>
+      <h3 class="main-color-text"><i class="fa fa-link"></i> Related posts</h3>
         {% assign listed_posts_urls = page.url | split: ' ' %}
         
         <ul>

@@ -3,9 +3,9 @@
 <div class="navbar-fixed"> 
     <nav class="main-color">
         <div class="nav-wrapper">
-            <a href="{{ site.baseurl }}" class="brand-logo left">
+            <a href="{{ site.domain }}" class="brand-logo left">
                 <span class="hide-on-small-only">
-                    <img class="logo" src="{{ site.baseurl }}/assets/img/small/logo.png" ALT="{{ site.keyword }}"  />
+                    <img class="logo" src="{{ site.domain }}/assets/img/small/logo.png" ALT="{{ page.keyword }}"  />
                 </span>
                 <!-- == Page == -->
                 <span class="logo-text hide-on-med-and-up">{{ site.title }} </span>
@@ -21,9 +21,4 @@
             </ul>  
         </div>  
     </nav>
-</div> 
-
-
-{% include materialize/sidebar.html %}
-
-
+</div>
